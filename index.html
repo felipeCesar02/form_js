@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadrastamento</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container1">
+
+        
+
+           <div class="header">
+               <h2>Dados Pessoais</h2>
+           </div>
+
+
+               <form action="" class="form" id="form1" autocomplete="off">
+              
+                  <div class="form-control">
+                        <label>Nome</label>
+                        <input type="text" id="username" class="inputs required" placeholder="Felipe" maxlength="20" onkeypress="return ApenasLetras(event,this)">
+                        <small>Error message</small>      
+                 </div>
+                 <div class="form-control">
+                        <label for="Sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome" class="inputs required" placeholder="Silva" maxlength="20" onkeypress="return ApenasLetras(event,this)">
+                        <small>Error message</small> 
+                 </div>
+                 <div class="form-control">
+                       <label for="cpf">CPF</label>
+                       <input type="text" id="cpf" class="inputs required" placeholder="000.000.000-00" maxlength="14" onkeypress="return SoNumeros();">
+                       <small>Error message</small>
+                 </div>
+                 <div class="form-control">
+                     <label for="idade">Idade</label>
+                     <input type="text" id="idade" class="inputs required" placeholder="00" maxlength="2" onkeypress="return SoNumeros();">
+                     <small>Error message</small>
+                 </div>
+                <div class="form-control">
+                    <label for="datanasc">Data de Nascimento</label>
+                    <input type="date" class="inputs required" id="datanasc" max="2022-12-31" onkeypress="return SoNumeros();">
+                    <small>Error message</small>
+                </div>
+             </form>
+                
+       
+    
+    </div>
+    <div class="container2">
+        
+
+        <div class="header">
+            <h2> Endereço</h2>
+        </div>
+
+             <form action="" class="form" id="form2" autocomplete="off"> 
+              
+               <div class="form-control">
+                   <label>CEP</label>
+                   <input name="cep" autocomplete="off" onkeypress="return SoNumeros();" placeholder="00000-000" type="text" id="cep" value="" maxlength="9"
+                             onblur="pesquisacep(this.value);"/>
+                   <small>Error message</small>
+             </div>
+              <div class="form-control">
+                   <label for="rua">Rua</label>
+                   <input name="rua" placeholder="Rua Adolfo" maxlength="20" type="text" id="rua" onkeypress="return ApenasLetras(event,this)"/>
+                   <small>Error message</small>
+             </div>
+              <div class="form-control">
+                   <label for="num">Numero</label>
+                   <input name="num" placeholder="0000" maxlength="6" type="text" id="num" onkeypress="return SoNumeros();"/>
+                   <small>Error message</small>
+              </div>
+              <div class="form-control">
+                  <label for="bairro">Bairro</label>
+                  <input name="bairro" placeholder="Bairro Esperança" maxlength="20" type="text" id="bairro" onkeypress="return ApenasLetras(event,this)"/>
+                  <small>Error message</small>
+              </div>
+              <div class="form-control">
+                  <label for="cidade">Cidade</label>
+                  <input name="cidade" placeholder="Natal" type="text" id="cidade" maxlength="15" onkeypress="return ApenasLetras(event,this)" />
+                  <small>Error message</small>
+             </div>
+              <div class="form-control">
+                  <label for="uf">UF</label>
+                  <input name="uf" placeholder="RN" type="text" id="uf" maxlength="2" onkeypress="return ApenasLetras(event,this)" />
+                  <small>Error message</small>
+             </div>
+          </form>
+             
+    </div>
+    <div class="container3">
+        
+
+        <div class="header">
+            <h2> Habilidades</h2>
+        </div>
+
+            <form action="" class="form" id="form3" autocomplete="off"> 
+           
+           
+               <div class="form-control" >
+                   <label>Qual o seu Hobby?</label>
+                     <input type="text" id="Hobby" maxlength="20" onkeypress="return ApenasLetras(event,this)">
+                     <small>Error message</small>
+                 </div>
+                 
+                    <legend id="lpd"> Voçê aceita os termos do LGPD?</legend>
+                    <input type="radio" name="check" id="posit"> <label
+                         for="posit">Aceito</label>
+                    <input type="radio" name="check" id="negativ"> <label
+                         for="negativ">Não Aceito</label>
+
+                  <button type="submit" id="enviar">Enviar</button>
+          </form>
+             
+    </div>
+    <script src="./index.js"> </script>
+</body>
+</html>
